@@ -1,0 +1,13 @@
+<header style="box-shadow: 2px 2px 4px rgb(200, 200, 200); height: 10vh; background-color: red;">
+    <h2 style="color: white;">CAT WORLD</h2>
+</header>
+
+<div class="grid">
+<app-cat-card *ngFor="let cat of listOne" [cat]="cat"></app-cat-card>
+</div>
+ 
+<div class=" buttonSection">
+    <button (click)="list1()">1</button>
+    <button (click)="list2()">2</button>
+    <button>3</button>
+</div>

@@ -1,0 +1,71 @@
+header{
+    background-color: white;
+    display: flex;
+    align-content: center;
+    box-shadow: 2px 2px 4px gainsboro;
+    position: fixed;
+    width: 100%;
+}
+
+.container{
+    justify-content: center;
+}
+
+.btn{
+    background-color: transparent;
+    color: red;
+    font-size:1.5rem;
+    margin: 0.5rem;
+    border: none;
+}
+
+.btn:hover{
+    border: none;
+    color: black;
+}
+
+.infoContainer{
+    padding-top:10%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.descriptionContainer{
+    width: 80%;
+    border-top: 8px solid red;
+    box-shadow: 2px 2px 6px gainsboro;
+    padding: 3%;
+    height: fit-content;
+}
+
+.img{
+    padding: 1rem;
+}
+
+.img-fluid{
+    height: 50vh;
+    border: 3px solid white;
+    box-shadow: 2px 2px 6px gainsboro;
+    border-radius: 5%;
+}
+
+.features{
+    margin-top: 3%;
+    border-radius: 20px;
+    border: 2px solid rgb(211, 211, 211);
+    width: 100%;
+    padding: 2rem;
+}
+
+.bi-check-circle-fill{
+    color: green;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    list-style:none;
+    gap: 4%;
+}

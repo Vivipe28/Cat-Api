@@ -1,0 +1,7 @@
+<body>
+    <div (click)="infoCat(id.value, cat.image.url)">
+        <input class="id" #id value="{{cat.id}}" style="display: none;">
+        <img [src]="cat.image.url" alt="cat" class="img-fluid">
+        <h5>{{cat.name}}</h5>
+    </div>
+</body>
