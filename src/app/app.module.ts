@@ -8,12 +8,13 @@ import { HomeComponent } from './components/home/home.component';
 import { CatCardComponent } from './shared/cat-card/cat-card.component';
 import { InfoCatComponent } from './components/info-cat/info-cat.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CatCardComponent,
-    InfoCatComponent
+    InfoCatComponent,
   ],
   imports: [
     BrowserModule,

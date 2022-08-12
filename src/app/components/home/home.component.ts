@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cat } from 'src/app/models/cat';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -8,22 +9,43 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class HomeComponent implements OnInit {
 
-  public listOne:any=[];
+  public listOne:Array<Cat>= new Array<Cat>;
 
   constructor(private httpService:HttpService) { }
 
   ngOnInit(): void {
     this.httpService.catList1().subscribe((resp:any) => {
-      console.log(resp);
-      this.listOne = resp;
+      resp.forEach((item:any) => {
+        if(item.image !== undefined){
+        this.listOne.push(new Cat(item.name, item.image,item.id))
+        }
+      })
+      
     })
 
   }
 
-  list2(){
+  list3(){
     this.listOne.length = 0;
     this.httpService.catList3().subscribe((resp:any)=>{
-    this.listOne = resp;
+      resp.forEach((item:any) => {
+        if(item.image !== undefined){
+        this.listOne.push(new Cat(item.name, item.image,item.id))
+        }
+      });
+    
+    console.log(this.listOne);
+    })
+  }
+
+  list2(){
+    this.listOne.length = 0;
+    this.httpService.catList2().subscribe((resp:any)=>{
+      resp.forEach((item:any) => {
+        if(item.image !==undefined){
+        this.listOne.push(new Cat(item.name, item.image,item.id))
+        }
+      })
     console.log(this.listOne);
     })
   }
@@ -31,10 +53,17 @@ export class HomeComponent implements OnInit {
   list1(){
     this.listOne.length = 0;
     this.httpService.catList1().subscribe((resp:any)=>{
-    this.listOne = resp;
+      resp.forEach((item:any) => {
+        if(item.image !== undefined){
+        this.listOne.push(new Cat(item.name, item.image,item.id))
+        }
+      });
+    
     console.log(this.listOne);
     })
   }
+
+  
 
 
 

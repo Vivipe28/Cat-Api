@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ignoreElements } from 'rxjs';
 import { Cat } from 'src/app/models/cat';
 import { HttpService } from 'src/app/services/http.service';
 
@@ -27,4 +28,13 @@ export class CatCardComponent implements OnInit {
     })
   }
 
+  validateImageUrl(cat:Cat){
+    
+   if(cat.image !== undefined){
+    return true
+   } else{
+    return false
+   }
+    
+  }
 }
